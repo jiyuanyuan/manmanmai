@@ -1,0 +1,70 @@
+/*
+ * @Author: Esther 
+ * @Date: 2017-11-07 01:11:14 
+ */
+
+.moneyctrl {
+    background-color: #fff;
+    width: 100%;
+    .moneyctrlList {
+        li {
+            width: 100%;
+            a {
+                width: 100%;
+                padding: px2em(14) px2em(8);
+                display: block;
+                .left {
+
+                    img {
+                        width: px2em(100);
+                        height: px2em(100);
+                    }
+                }
+                .right {
+                    min-height: px2em(100);
+                    overflow: hidden;
+                    padding-left: px2em(10);
+                    .tit {
+                        color: #333;
+                        word-break: break-all; // 自动换行
+                        min-height: px2em(57);
+                        line-height: px2em(19);
+                        @include font-dpr(14);
+                        span {
+                            word-break: keep-all;
+                            color: $main-color-price;
+                        }
+                    }
+                    .other {
+                        margin-top: px2em(8);
+                        color: $main-font-color-grew;
+                        padding-right: px2em(5);
+                        .mall {
+                            float: left;
+                            @include font-dpr(10);
+                        }
+                        .comment {
+                            float: right;
+                            height: px2em(15);
+                            line-height: px2em(15);
+                            position: relative;
+                            padding-left: px2em(20);
+                            @include font-dpr(10);
+                            .icon-comment {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: px2em(14);
+                                height: px2em(15);
+                                display: inline-block;
+                                margin-right: px2em(4);
+                                background: url('../images/comment.svg');
+                                background-size: px2em(14) px2em(15);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

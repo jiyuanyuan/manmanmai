@@ -1,0 +1,637 @@
+/*
+ * @Author: Esther 
+ * @Date: 2017-11-04 17:46:24 
+ */
+
+@charset "utf-8";
+
+
+
+
+
+
+
+
+
+
+
+
+/** Helpers **/
+
+@import './helpers/_parameters';
+@import './helpers/_functions';
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************公用css********************************/
+
+html {
+    font-size: 62.5%; // 10 ÷ 16 × 100% = 62.5% 
+    background: #fff;
+    overflow-y: scroll;
+    min-width: 375px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+html * {
+    outline: 0;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #f7f7f7;
+    color: $main-font-color;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    /*在移动端特殊的设置*/
+}
+
+input,
+select,
+textarea {
+    font-size: 100%
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+del {
+    text-decoration: line-through
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: 500
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+caption,
+th {
+    text-align: left
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: 500
+}
+
+ins,
+a {
+    text-decoration: none;
+    color: $main-font-color;
+}
+
+a:hover {
+    color: $main-font-color;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;
+    /*组件默认的样式空*/
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+input,
+select,
+form images,
+button {
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+    outline: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************************/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w33 {
+    width: 33.3333%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.pr {
+    position: relative;
+}
+
+.v-middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+.star {
+    // background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#cacaca' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+    display: inline-block;
+    width: 90px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.star1,
+.star2,
+.star3,
+.star4,
+.star5 {
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>");
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.star1 {
+    width: 18px;
+}
+
+.star2 {
+    width: 35px;
+}
+
+.star3 {
+    width: 55px;
+}
+
+.star4 {
+    width: 70px;
+}
+
+.star5 {
+    width: 90px;
+}
+
+.price .star {
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************公共Header*************************/
+
+.mainHeader {
+    width: 100%;
+    height: px2em(44);
+    background-color: $main-color;
+    .logo {
+        padding: px2em(10) px2em(12);
+        height: 100%;
+        img {
+            max-height: px2em(24);
+            overflow: hidden;
+        }
+    }
+    .appDownload {
+        padding: px2em(6) px2em(12);
+        height: 100%;
+        img {
+            max-height: px2em(32);
+            overflow: hidden;
+        }
+    }
+}
+
+
+.mainHeader {
+    .head {
+        background: #ff841d;
+        color: #FFFFFF;
+        height: px2em(44);
+        width: 100%;
+        position: relative;
+        .back {
+            width: px2em(50);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: -webkit-box !important;
+            display: box !important;
+            position: relative;
+            .icon-back {
+                width: 100%;
+                height: 100%;
+                color: #fff;
+                display: -webkit-box !important;
+                display: box !important;
+                position: relative;
+                padding: px2em(12) px2em(12);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    max-height: px2em(32);
+                    display: inline-block;
+                }
+            }
+        }
+        h1 {
+            width: 70%;
+            height: 100%;
+            font-weight: bold;
+            text-align: center;
+            line-height: px2em(44);
+            display: box !important;
+            position: relative;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            -webkit-box-align: center;
+            box-align: center;
+            -webkit-box-pack: center;
+            box-pack: center;
+            @include font-dpr(20);
+        }
+        .appDownload {
+            padding: px2em(6) px2em(12);
+            height: 100%;
+            position: relative;
+            img {
+                position: relative;
+                max-height: px2em(32);
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************公共Footer*************************/
+
+.mainFooter {
+    width: 100%;
+    .footerButton {
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        .register {
+            border-right: 1px solid #c4c4c4;
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: px2em(10) 0;
+        }
+        .login {
+            border-right: 1px solid #c4c4c4;
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: px2em(10) 0;
+        }
+        .toTop {
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: px2em(10) 0;
+            img {
+                height: px2em(15);
+                width: px2em(15);
+                vertical-align: middle;
+                margin-top: px2em(-4);
+                margin-right: px2em(4);
+            }
+        }
+    }
+    .msg {
+        text-align: center;
+        padding: px2em(10) px2em(30);
+        a {
+            display: inline-block;
+        }
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.mainMore {
+    // background-color: #f4f4f4;
+    height: px2em(55);
+    width: 100%;
+    padding: px2em(11);
+    a {
+        display: block;
+        height: 32px;
+        background-color: #d4d4d4;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+        background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+        background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+        border-bottom: 1px solid #bababa;
+        box-shadow: 0 0 1px #666;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 14px;
+        line-height: 32px;
+        overflow: hidden;
+    }
+}
+
+
+
+
+
+
+/**********************公共Title*************************/
+
+.commTitle {
+    width: 100%;
+    height: px2em(35);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffaf47), to(#ff9000));
+    h2 {
+        height: px2em(35);
+        color: #fff;
+        line-height: px2em(35);
+        margin-left: px2em(10);
+        @include font-dpr(18);
+    }
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        right: 0;
+        img {
+            width: px2em(20);
+            height: px2em(20);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/***************** 公共三级导航菜单 *******************/
+
+.navigationBar {
+    overflow: hidden;
+    height: px2em(40);
+    width: 100%;
+    line-height: px2em(40);
+    padding-left: 8px;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+
+
+    @include font-dpr(14);
+    ul {
+        width: 70%;
+        height: px2em(40);
+        overflow: hidden;
+        padding: 0 px2em(10);
+        float: left;
+        li {
+            max-width: 40%;
+            float: left;
+            a {
+                overflow: hidden;
+                display: inline-block;
+                height: px2em(40);
+                line-height: px2em(40);
+                padding: 0 px2em(2);
+                color: #000000;
+                @include font-dpr(16);
+            }
+        }
+    }
+    .btn-filter {
+        height: px2em(40);
+        width: 25%;
+        padding: px2em(3) px2em(10);
+        float: right;
+        a {
+
+            float: right;
+            margin-right: 8px;
+            display: block;
+            height: 28px;
+            background-color: #d0d0d0;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#d7d7d7), to(#f5f5f5));
+            background: -moz-linear-gradient(top, #d7d7d7, #f5f5f5);
+            background: -o-linear-gradient(top, #d7d7d7, #f5f5f5);
+            border-bottom: 1px solid #bababa;
+            box-shadow: 0 1px 2px #888;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -o-border-radius: 5px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 14px;
+            line-height: 28px;
+            overflow: hidden;
+            border: none;
+            padding: 0 16px;
+            margin-top: 4px;
+        }
+    }
+}
+
+
+.page {
+    text-align: center;
+    margin-top: px2em(20);
+    padding-bottom: px2em(10);
+    span {
+        display: inline-block;
+        height: px2em(30);
+        text-align: center;
+        a {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: #d4d4d4;
+            background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+            background: -moz-linear-gradient(top, #f1f1f1, #d4d4d4);
+            background: -o-linear-gradient(top, #f1f1f1, #d4d4d4);
+            border-bottom: 1px solid #bababa;
+            box-shadow: 0 0 1px #666;
+            -webkit-border-radius: px2em(5);
+            -moz-border-radius: px2em(5);
+            -o-border-radius: px2em(5);
+            border-radius: px2em(5);
+            line-height: px2em(30);
+            overflow: hidden;
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+            @include font-dpr(14);
+        }
+    }
+}

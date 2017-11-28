@@ -1,0 +1,149 @@
+/*
+ * @Author: Esther 
+ * @Date: 2017-11-07 01:08:19 
+ */
+
+.productDetail {
+    background-color: #fff;
+    /*********************** 商品详细 ***********************/
+    .productDetailContent {
+        background-color: #fff;
+        .productDetailHeader {
+            padding: 0 px2em(5);
+            .proPic {
+                display: block;
+                width: px2em(200);
+                height: px2em(200);
+                margin: 0px auto;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    vertical-align: middle;
+                }
+            }
+            .proTitle {
+                min-height: px2em(30);
+                width: 80%;
+                margin: 0 auto px2em(10) auto;
+                text-align: center;
+                @include font-dpr(16);
+            }
+            .proTab {
+                width: 100%;
+                margin-top: px2em(20);
+                height: px2em(35);
+                line-height: px2em(35);
+                overflow: hidden;
+                z-index: 0;
+                background-color: #ffbb00;
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffd050), to(#ffbb00));
+                background: -moz-linear-gradient(top, #ffd050, #ffbb00);
+                background: -o-linear-gradient(top, #ffd050, #ffbb00);
+                border-top: 1px solid #c14d00;
+                border-bottom: 1px solid #c14d00;
+                @include font-dpr(15);
+                ul {
+                    width: 100%;
+                    li {
+                        background-color: $main-color;
+                        float: left;
+                        a {
+                            display: inline-block;
+                            @include font-dpr(16);
+                            font-weight: bold;
+                            color: #fff;
+                            height: px2em(35);
+                            width: 100%;
+                            text-align: center;
+                        }
+                        &:nth-child(1),
+                        &:nth-child(2) {
+                            border-right: 1px solid #c14d00;
+                        }
+                        &.cur {
+                            background-color: #ffbb00;
+                            background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffa632), to(#ff9000));
+                            background: -moz-linear-gradient(top, #ffa632, #ff9000);
+                            background: -o-linear-gradient(top, #ffa632, #ff9000);
+                        }
+                    }
+                }
+            }
+            .buyShop {
+                height: px2em(30);
+                border-bottom: 1px solid $main-color-line;
+                table {
+                    margin-top: px2em(8);
+                    border-collapse: collapse;
+                    border-spacing: 0;
+                    td {
+                        line-height: px2em(22);
+                        a {
+                            @include font-dpr(16);
+                        }
+                    }
+                    .p_pic {
+                        text-align: center;
+                        border-bottom: 1px solid #bbb;
+                    }
+                    .red {
+                        color: $productlist-color-price;
+                        text-align: right;
+                        padding-right: px2em(15);
+                    }
+                }
+            }
+            .note {
+
+                color: #888;
+                padding: px2em(8) px2em(10);
+                line-height: px2em(18);
+                @include font-dpr(12);
+            }
+        }
+        .proComment {
+            border-top: 4px solid #7a7a7a;
+            margin-top: 5px;
+            .proCommentTitle {
+
+                height: 34px;
+                line-height: 34px;
+                text-align: center;
+                overflow: hidden;
+                background: #dbdbdb;
+                font-size: 14px;
+                border-top: 1px solid #fff;
+            }
+            .proCommentBody {
+                width: 100%;
+                ul {
+                    padding: px2em(10);
+                    width: 100%;
+                    li {
+                        padding: px2em(20) px2em(5);
+                        border-bottom: 1px solid #ddd;
+                        width: 100%;
+                        float: left;
+                        .title {
+                            span {
+                                display: block;
+                                line-height: px2em(18);
+                                height: px2em(18);
+                                overflow: hidden;
+                                color: #999;
+                                @include font-dpr(14);
+                            }
+                        }
+                        .comment {
+                            line-height: px2em(22);
+                            padding-top: px2em(5);
+                            color: #000;
+                            @include font-dpr(14);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

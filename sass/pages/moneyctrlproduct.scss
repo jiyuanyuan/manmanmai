@@ -1,0 +1,201 @@
+/*
+ * @Author: Esther 
+ * @Date: 2017-11-03 20:54:50 
+ */
+
+.moneyCtrlProduct,
+.discountProduct {
+    background: #fff;
+    padding: px2em(5) px2em(5);
+    .tit {
+        font-weight: bold;
+        h3 {
+            font-weight: bold;
+            line-height: px2em(18);
+            margin: px2em(10) auto px2em(5) auto;
+            @include font-dpr(18);
+        }
+        span {
+            line-height: px2em(15);
+            color: $main-color-price;
+            @include font-dpr(15)
+        }
+    }
+    .info {
+        color: #999999;
+        margin: px2em(12) auto;
+        span {
+            padding: 0 px2em(5);
+        }
+        .mail {}
+        .addTime {}
+        .author {}
+        .comCount {
+            a {
+                color: #4682c5;
+            }
+        }
+    }
+    .content {
+
+        .picLarge {
+
+            text-align: center;
+            img {
+
+                max-width: 100%;
+                min-width: px2em(200);
+            }
+        }
+        .con {
+
+            word-break: break-all;
+            line-height: px2em(24);
+            color: #606060;
+            @include font-dpr(14);
+        }
+        .picSmall {
+            float: right;
+
+            img {
+                width: px2em(120);
+                height: px2em(120);
+            }
+        }
+    }
+    .cityList {
+        text-align: center;
+        padding-top: px2em(20);
+        ul {
+            display: inline-block;
+            border-radius: px2em(4);
+            box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+            li {
+                text-align: center;
+                border-bottom: 1px dotted #c0c0c0;
+                line-height: px2em(22);
+            }
+            a {
+                padding: 0 px2em(10);
+                display: block;
+                &:hover {
+                    background: #f7f6f4;
+                }
+                span {
+                    padding: 0 px2em(10);
+                    text-align: left;
+                }
+            }
+            strong {
+                float: right;
+                text-align: right;
+                padding: 0 px2em(10);
+                margin-left: px2em(20);
+                color: #f27b04;
+            }
+        }
+    }
+    .goLink {
+        width: 100%;
+        padding: px2em(20) px2em(10);
+        a {
+            display: block;
+            width: 100%;
+            height: px2em(40);
+            line-height: px2em(40);
+            text-align: center;
+            background: #FF9000;
+            color: white;
+            border-radius: px2em(3);
+            @include font-dpr(16);
+        }
+    }
+    .comment {
+        .tit {
+
+            padding: px2em(6) px2em(6);
+            line-height: px2em(30);
+            @include font-dpr(16);
+        }
+        /* 发表评论 */
+        .reply {
+            .form {
+                width: 100%;
+                border: 2px solid #ECEAE8;
+                border-radius: px2em(2);
+                padding-top: px2em(4);
+                padding-left: px2em(4);
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    border: none;
+                    height: px2em(70);
+                    line-height: px2em(22);
+                    @include font-dpr(18);
+                }
+            }
+            .ctrl {
+                background: #fbfbfb;
+                height: px2em(36);
+                margin-left: px2em(-4);
+                position: relative;
+                input {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    background: #ff841d;
+                    border: 2px solid #ff841d;
+                    width: px2em(100);
+                    height: px2em(36);
+                    border-radius: px2em(2);
+                    color: white;
+                    @include font-dpr(14);
+                }
+            }
+        }
+        .list {
+            width: 100%;
+            ul {
+                width: 100%;
+            }
+            li {
+                padding: px2em(18) px2em(10);
+            }
+            .userimg {
+                width: px2em(40);
+                float: left;
+                overflow: hidden;
+                img {
+                    width: px2em(40);
+                    height: px2em(40);
+                    border-radius: px2em(20);
+                }
+            }
+            .con {
+                padding-left: px2em(10);
+                overflow: hidden;
+            }
+            .name {
+                padding-bottom: px2em(6);
+            }
+            .username {
+                color: #5997c0;
+
+                float: left;
+                @include font-dpr(12);
+            }
+            .time {
+                text-align: right;
+                float: right;
+                ;
+            }
+            .content {
+                word-break: break-all;
+
+                color: #606060;
+                line-height: px2em(20);
+                @include font-dpr(16);
+            }
+        }
+    }
+}
